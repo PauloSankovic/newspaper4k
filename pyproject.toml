@@ -35,39 +35,14 @@ requests = ">=2.26.0"
 feedparser = ">=6.0.0"
 tldextract = ">=2.0.1"
 python-dateutil = ">=2.6.1"
-numpy = [
-  { version = ">=1.25", python = ">=3.11", optional = true },
-  { version = "^1.24", python = ">=3.8, <3.11", optional = true },
-]
-pandas = [
-  { version = ">=2.1.0", optional = true, python = ">=3.11" },
-  { version = ">=1.4", optional = true, python = ">=3.8, <3.11" },
-]
 typing-extensions = ">=4.10.0"
-
-# Language specific dependencies
-tinysegmenter = { version = ">=0.4", optional = true }
-pythainlp = { version = ">=2.3.2", optional = true }
-jieba = { version = ">=0.42.1", optional = true }
-indic-nlp-library = { version = ">=0.90", optional = true }
 cloudscraper = { version = ">=1.2.0", optional = true }
 gnews = { version = ">=0.3.6", optional = true }
 
 [tool.poetry.extras]
-zh = ["jieba"]
-th = ["pythainlp"]
-ja = ["tinysegmenter"]
-bn = ["indic-nlp-library"]
-hi = ["indic-nlp-library"]
-np = ["indic-nlp-library"]
-ta = ["indic-nlp-library"]
 cloudflare = ["cloudscraper"]
 gnews = ["gnews"]
 all = [
-  "tinysegmenter",
-  "pythainlp",
-  "jieba",
-  "indic-nlp-library",
   "cloudscraper",
   "gnews",
 ]
