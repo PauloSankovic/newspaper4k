@@ -488,8 +488,6 @@ class Article:
 
         self.set_movies(self.extractor.get_videos(self.doc, self.top_node))
 
-        self.fetch_images()
-
         if self.top_node is not None:
             self._top_node_complemented = document_cleaner.clean(
                 self._top_node_complemented
